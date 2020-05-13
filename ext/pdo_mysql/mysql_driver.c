@@ -623,7 +623,8 @@ static int pdo_mysql_handle_factory(pdo_dbh_t *dbh, zval *driver_options)
 #endif
 
 	H->assume_national_character_set_strings = 0;
-	H->buffered = H->emulate_prepare = 1;
+	H->buffered = 1;
+	H->emulate_prepare = 0;
 
 	/* handle MySQL options */
 	if (driver_options) {
